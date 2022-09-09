@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>AdvenTime</title>
+    <link rel="stylesheet" media="screen" href="style2.css">
+    <link rel="stylesheet" media="print" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifgh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" integrity="sha512-apX8rFN/KxJW8rniQbkvzrshQ3KvyEH+4szT3Sno5svdr6E/CP0QE862yEeLBMUnCqLko8QaugGkzvWS7uNfFQ" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="form.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_eTZhZf8ougwKHFDMLIQLK_Wwgpbq0Sc&callback=initMap" type="text/javascript"></script>
+</head>
+<body>
+  <header>
+    <nav id="nav-show" class="navbar navbar-expand-lg navbar-light container py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">AdvenTime</a>
+          <ul class="navbar-nav ms-auto float-right text-right">
+            <li class="nav-item">
+              <a class="nav-link ms-3" href="index2.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-3" href="activities2.html">Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-3" href="destinations2.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-3" href="eligibility.html">Eligibility</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-3" href="Guide2.html">Guide</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active ms-3" aria-current="page" href="#">Booking</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="text-center">
+      <h4>Choose a package that interests you: </h4>
+      </div>
+      <div class="row slideanim">
+        <div class="col-md-4 col-sm-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1>Beginners</h1>
+            </div>
+            <div class="panel-body">
+              <p>Duration: <strong>20mins/activity</strong> </p>
+              <p>People: <strong>Individual</strong></p>
+              <p>Activities Included: <strong>Paragliding, Parasailing, Jet Skiing, Open Cable Car</strong></p>
+              <p>Trainer: <strong>Provided</strong></p>
+            </div>
+            <div class="panel-footer">
+              <h3>$290</h3>
+            </div>
+          </div>      
+        </div>     
+        <div class="col-md-4 col-sm-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1>Experienced</h1>
+            </div>
+            <div class="panel-body">
+                <p>Duration: <strong>20mins/activity</strong> </p>
+                <p>People: <strong>4-6</strong></p>
+                <p>Activities Included: <strong>Rock Climbing, River Rafting, FlyBoarding, Bungee Jumping </strong></p>
+                <p>Trainer: <strong>Provided</strong></p>
+            </div>
+            <div class="panel-footer">
+              <h3>$420</h3>
+            </div>
+          </div>      
+        </div>       
+        <div class="col-md-4 col-sm-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1>Advanced</h1>
+            </div>
+            <div class="panel-body">
+                <p>Duration: <strong>20mins/activity</strong> </p>
+                <p>People: <strong>10-12</strong></p>
+                <p>Activities Included: <strong>Ice Skiing, Trekking, Surfing, Snowboarding </strong></p>
+                <p>Trainer: <strong>Provided</strong></p>
+            </div>
+            <div class="panel-footer">
+              <h3>$650</h3>
+            </div>
+          </div>      
+        </div>    
+      </div>
+  </div>
+  <div class="alert"></div>
+    <form id="save-later-form">
+      <h4>Please register yourself below: </h4>
+      <label for="full-name">Full Name</label>
+      <input type="text" name="full-name" id="full-name" />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
+      <label for="phone">Phone Number</label>
+      <input type="tel" name="phone" id="phone" maxlength="11" />
+      <label for="dob">Date Of Birth</label>
+      <input type="date" name="dob" id="dob" />
+      <label for="security">Choose A Package</label>
+      <select name="security" id="security" tabindex="0">
+        <option value="">Select a package</option>
+        <option value="best-friend">Beginners</option>
+        <option value="pet">Experienced</option>
+        <option value="spouse">Advanced</option>
+      </select>
+      <label for="description">Description</label>
+      <textarea
+        name="description"
+        id="description"
+        placeholder="Describe yourself and health problems if any in 100 words"
+      ></textarea>
+      <button type="submit" id="submit">SUBMIT</button>
+      <button type="submit" id="save">SAVE</button>
+    </form>
+
+    <div class="container">
+      <div class="text-center" id="none">
+        <h5>This is to check your current location in order to get that branch in contact with you about the booking details:</h5>
+            <button onclick="getLocation()" id="current">Display a map of your current location</button>
+            <div style="height: 450;" id="map"></div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+        <div class="text-center" id="none2">
+            <h4>Please visit our main office using the map below to discuss the booking details and itenary:</h4>
+        </div>
+        <div id="map2"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-sm-12">
+                    <h5><i class="fa fa-road"></i> AdvenTime CO INC.</h5>
+                    <div class="row">
+                        <div class="col-6 col-md-5 col-sm-24">
+                            <ul class="list-unstyled">
+                                <li><a href="">About</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Life Agreement</a></li>
+                                <li><a href="">Training</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-6 col-sm-24">
+                            <ul class="list-unstyled">
+                                <li><a href="">Email: adventime@gmail.com</li>
+                                <li><a href="">Instagram: adventime</a></li>
+                                <li><a href="">YouTube: AdvenTime</a></li>
+                                <li><a href="">Contact: +256754618903</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-6 col-sm-24">
+                    <h5 class="text-md-right">Main Branch Address:</h5>
+                    <p style="color: #aaa;">Plot 16, <br />Middle Close Bugolobi, <br />AdvenTime Office,<br /> Kampala, Uganda</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
